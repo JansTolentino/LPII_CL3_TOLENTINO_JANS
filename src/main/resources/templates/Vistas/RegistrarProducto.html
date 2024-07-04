@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registrar Producto</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center">Registrar Producto</h1>
+        <form th:action="@{/vistas/GuardarProducto}" method="post" th:object="${regproducto}" class="mt-4">
+            <input type="hidden" th:field="*{idproductocl3}">
+            <div class="form-group row">
+                <label for="nombrecl3" class="col-sm-2 col-form-label">Nombre</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nombrecl3" th:field="*{nombrecl3}" placeholder="Nombre del producto">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="precioventacl3" class="col-sm-2 col-form-label">Precio de Venta</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="precioventacl3" th:field="*{precioventacl3}" step="0.01" placeholder="Precio de venta">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="stock" class="col-sm-2 col-form-label">Stock</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="stock" th:field="*{stock}" placeholder="Cantidad en stock">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="preciocompcl3" class="col-sm-2 col-form-label">Precio de Compra</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="preciocompcl3" th:field="*{preciocompcl3}" step="0.01" placeholder="Precio de compra">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="estadocl3" class="col-sm-2 col-form-label">Estado</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="estadocl3" th:field="*{estadocl3}" placeholder="Estado del producto">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="descripcl3" class="col-sm-2 col-form-label">Descripción</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="descripcl3" th:field="*{descripcl3}" placeholder="Descripción del producto">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12 text-center">
+                    <input type="submit" class="btn btn-primary" value="Registrar">
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

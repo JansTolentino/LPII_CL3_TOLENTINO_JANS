@@ -7,89 +7,69 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="tbl_Producto")
-
+@Table(name = "TBL_PRODUCTOCL3")
 public class TblProducto {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer  idproductocl3;
+    
+
+	private String nombrecl3;
+    private double precioventacl3;
+    private Integer  stock;
+    private double preciocompcl3;
+    private String estadocl3;
+    private String descripcl3;
+
+	public Integer getIdproductocl3() {
+		return idproductocl3;
+	}
+	public void setIdproductocl3(Integer idproductocl3) {
+		this.idproductocl3 = idproductocl3;
+	}
+	public String getNombrecl3() {
+		return nombrecl3;
+	}
+	public void setNombrecl3(String nombrecl3) {
+		this.nombrecl3 = nombrecl3;
+	}
+	public double getPrecioventacl3() {
+		return precioventacl3;
+	}
+	public void setPrecioventacl3(double precioventacl3) {
+		this.precioventacl3 = precioventacl3;
+	}
+	public Integer getStock() {
+		return stock;
+	}
+	public void setStock(Integer stock) {
+		this.stock = stock;
+	}
+	public double getPreciocompcl3() {
+		return preciocompcl3;
+	}
+	public void setPreciocompcl3(double preciocompcl3) {
+		this.preciocompcl3 = preciocompcl3;
+	}
+	public String getEstadocl3() {
+		return estadocl3;
+	}
+	public void setEstadocl3(String estadocl3) {
+		this.estadocl3 = estadocl3;
+	}
+	public String getDescripcl3() {
+		return descripcl3;
+	}
+	public void setDescripcl3(String descripcl3) {
+		this.descripcl3 = descripcl3;
+	}
 	
-	private int idProductoCL3;
-
-	private String nombreCL3;
-	
-	private double precioVentaCL3;
-	
-	private int stockCL3;
-	
-	private double precioCompCL3;
-	
-	private String estadoCL3;
-	
-	private String descripCL3;
-	
-	public int getIdProductoCL3() {
-		return idProductoCL3;
-	}
-
-	public void setIdProductoCL3(int idProductoCL3) {
-		this.idProductoCL3 = idProductoCL3;
-	}
-
-	public String getNombreCL3() {
-		return nombreCL3;
-	}
-
-	public void setNombreCL3(String nombreCL3) {
-		this.nombreCL3 = nombreCL3;
-	}
-
-	public double getPrecioVentaCL3() {
-		return precioVentaCL3;
-	}
-
-	public void setPrecioVentaCL3(double precioVentaCL3) {
-		this.precioVentaCL3 = precioVentaCL3;
-	}
-
-	public int getStockCL3() {
-		return stockCL3;
-	}
-
-	public void setStockCL3(int stockCL3) {
-		this.stockCL3 = stockCL3;
-	}
-
-	public double getPrecioCompCL3() {
-		return precioCompCL3;
-	}
-
-	public void setPrecioCompCL3(double precioCompCL3) {
-		this.precioCompCL3 = precioCompCL3;
-	}
-
-	public String getEstadoCL3() {
-		return estadoCL3;
-	}
-
-	public void setEstadoCL3(String estadoCL3) {
-		this.estadoCL3 = estadoCL3;
-	}
-
-	public String getDescripCL3() {
-		return descripCL3;
-	}
-
-	public void setDescripCL3(String descripCL3) {
-		this.descripCL3 = descripCL3;
-	}
-
 	@Override
 	public String toString() {
-		return "TblProducto [idProductoCL3=" + idProductoCL3 + ", nombreCL3=" + nombreCL3 + ", precioVentaCL3="
-				+ precioVentaCL3 + ", stockCL3=" + stockCL3 + ", precioCompCL3=" + precioCompCL3 + ", estadoCL3="
-				+ estadoCL3 + ", descripCL3=" + descripCL3 + "]";
-	}	
-	
-	
+		return "TblProducto [idproductocl3=" + idproductocl3 + ", nombrecl3=" + nombrecl3 + ", precioventacl3="
+				+ precioventacl3 + ", stock=" + stock + ", preciocompcl3=" + preciocompcl3 + ", estadocl3=" + estadocl3
+				+ ", descripcl3=" + descripcl3 + "]";
+	}
+
 }
